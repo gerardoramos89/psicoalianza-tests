@@ -46,22 +46,9 @@ module.exports = {
 Estructura del Proyecto
 Este proyecto tiene la siguiente estructura de archivos:
 
-bash
-Copiar
-Editar
-.
-├── cypress/
-│   ├── e2e/
-│   │   └── login.spec.js       # Pruebas de inicio de sesión
-│   ├── fixtures/               # Datos de prueba (si es necesario)
-│   ├── support/
-│   │   ├── commands.js         # Comandos personalizados de Cypress
-│   │   ├── e2e.js              # Configuración global de Cypress
-│   │   └── pageObjects/        # Page Objects
-├── cypress.config.js           # Configuración de Cypress
-├── .gitignore                  # Archivos que no se deben subir a Git
-├── package.json                # Dependencias y scripts de Node.js
-└── README.md                   # Este archivo
+![image](https://github.com/user-attachments/assets/766c845a-c080-4c7d-b000-2bfa43186f21)
+
+
 LoginPage.js
 Dentro de cypress/support/pageObjects/, se encuentra el archivo LoginPage.js que define el Page Object para el formulario de inicio de sesión.
 
