@@ -91,55 +91,6 @@ Este proyecto tiene la siguiente estructura de archivos:
 
 ![image](https://github.com/user-attachments/assets/766c845a-c080-4c7d-b000-2bfa43186f21)
 
-
-LoginPage.js
-Dentro de cypress/support/pageObjects/, se encuentra el archivo LoginPage.js que define el Page Object para el formulario de inicio de sesión.
-
-Ejemplo de LoginPage.js:
-
-javascript
-Copiar
-Editar
-class LoginPage {
-  visit() {
-    cy.visit('/login');
-  }
-
-  fillUsername(username) {
-    cy.get('input[name="email"]').type(username);
-  }
-
-  fillPassword(password) {
-    cy.get('input[name="password"]').type(password);
-  }
-
-  submit() {
-    cy.get('button[type="submit"]').click();
-  }
-}
-
-export default new LoginPage();
-Login Test
-El archivo de prueba principal, login.spec.js, realiza las pruebas automatizadas para el inicio de sesión en PsicoAlianza.
-
-Ejemplo de login.spec.js:
-
-javascript
-Copiar
-Editar
-import LoginPage from '../support/pageObjects/LoginPage';
-
-describe('Pruebas de inicio de sesión en PsicoAlianza', () => {
-  it('Debería iniciar sesión con credenciales válidas', () => {
-    LoginPage.visit();
-    LoginPage.fillUsername(Cypress.env('USERNAME'));
-    LoginPage.fillPassword(Cypress.env('PASSWORD'));
-    LoginPage.submit();
-
-    cy.url().should('eq', 'https://v2.psicoalianza.com/inicio');
-    cy.contains('Bienvenido').should('be.visible');
-  });
-});
 ## Ejecutar las Pruebas
 Modo Interactivo (Recomendado para Desarrollo)
 Para ejecutar las pruebas en un navegador interactivo, usa el siguiente comando:
