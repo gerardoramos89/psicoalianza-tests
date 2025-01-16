@@ -179,5 +179,10 @@ Las pruebas automatizadas realizadas en el módulo de inicio de sesión de Psico
 
 ## npx cypress run
 Esto ejecutará todas las pruebas en modo headless (sin interfaz gráfica) y generará un reporte en la consola.
+![image](https://github.com/user-attachments/assets/47004c68-e373-4ddf-895e-2fa9bd122d57)
+
+![image](https://github.com/user-attachments/assets/400a4dd4-fa35-467f-9bad-bc9dc0e6d6ec)
+
+![image](https://github.com/user-attachments/assets/4a7ba487-7121-44a6-807b-d11d2ccb7801)
 
 ![image](https://github.com/user-attachments/assets/6c206a77-0547-4d4b-b969-83c99b8c3165)
