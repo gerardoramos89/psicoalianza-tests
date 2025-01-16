@@ -1,3 +1,37 @@
+
+
+## Sentencia SQL 
+
+![image](https://github.com/user-attachments/assets/4f628157-423f-45f2-8b5d-a3791afbdb4f)
+
+
+SELECT 
+    e.nombre,
+    e.nit,
+    e.telefono,
+    c.idproducto,
+    SUM(c.transaccion) AS suma_transacciones,
+    v.fechavencimiento
+FROM 
+    Empresa e
+JOIN 
+    consumo c ON e.idempresa = c.idempresa
+JOIN 
+    vencimiento v ON e.idempresa = v.idempresa
+WHERE 
+    c.transaccion > 1
+    AND v.fechavencimiento > CURDATE()
+GROUP BY 
+    e.idempresa, c.idproducto, v.fechavencimiento
+
+
+
+
+
+
+
+
+
 # Proyecto de Pruebas Automatizadas - PsicoAlianza
 
 Este proyecto implementa pruebas automatizadas para el módulo de inicio de sesión de la plataforma PsicoAlianza, utilizando Cypress con la metodología **Page Object Model**.
