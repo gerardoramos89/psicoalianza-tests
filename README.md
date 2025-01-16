@@ -88,17 +88,8 @@ PASSWORD=123456789$$
 Paso 4: Configurar Cypress
 Asegúrate de que Cypress esté configurado correctamente en tu proyecto. La configuración predeterminada se encuentra en el archivo cypress.config.js. Si necesitas cambiar la URL base o agregar más configuraciones, hazlo aquí.
 
-Ejemplo de configuración en cypress.config.js:
+## Ejemplo de configuración en cypress.config.js:
 
-javascript
-Copiar
-Editar
-module.exports = {
-  e2e: {
-    baseUrl: 'https://v2.psicoalianza.com',
-    // Otras configuraciones personalizadas
-  },
-};
 Estructura del Proyecto
 Este proyecto tiene la siguiente estructura de archivos:
 
@@ -143,22 +134,22 @@ Se implementaron clases para modelar las páginas y sus interacciones. En este c
 Screenplay Pattern:
 
 Aunque el uso de Page Object fue predominante, también se incorporaron algunos elementos del patrón Screenplay, como la definición de tareas específicas (inicio de sesión) y actores (usuario) para realizar esas tareas.
-Resultados de las Pruebas
+## Resultados de las Pruebas
 Prueba de Inicio de Sesión con Credenciales Válidas:
 
-## Resultado: Aprobado.
+ Resultado: Aprobado.
 La prueba validó con éxito que el sistema permite a los usuarios iniciar sesión con un nombre de usuario 14251103 y una contraseña 123456789$$. El sistema redirige correctamente a la página de inicio después de un inicio de sesión exitoso.
 Prueba de Validación de Credenciales Incorrectas:
 
-## Resultado: Aprobado.
+Resultado: Aprobado.
 La prueba validó que se muestran mensajes de error apropiados cuando se ingresan credenciales incorrectas. Se verificó que el sistema no permite acceder a la plataforma con credenciales erróneas.
 Prueba de Redirección Correcta:
 
-## Resultado: Aprobado.
+Resultado: Aprobado.
 Se verificó que, tras un inicio de sesión exitoso, el sistema redirige al usuario a la página https://v2.psicoalianza.com/inicio. Esto cumple con el requisito de redirección.
 Visibilidad de Elementos Clave:
 
-## Resultado: Aprobado.
+Resultado: Aprobado.
 Se verificó que elementos como el mensaje de bienvenida (e.g., "Bienvenido") son visibles después de iniciar sesión exitosamente.
 Posibles Fallas o Áreas de Mejora
 Tiempo de Respuesta en la Carga de la Página de Inicio:
