@@ -154,6 +154,74 @@ Si prefieres ejecutar las pruebas de forma automática sin la interfaz gráfica,
 
 bash
 
+##Informe de Resultados de las Pruebas Automatizadas - PsicoAlianza
+##Resumen de las Pruebas Realizadas
+Las pruebas automatizadas fueron diseñadas para verificar la funcionalidad del módulo de inicio de sesión en la plataforma PsicoAlianza. El objetivo principal fue asegurarse de que el flujo de inicio de sesión funcione correctamente bajo diferentes escenarios. Las pruebas cubrieron los siguientes aspectos:
+
+##Inicio de sesión con credenciales válidas:
+
+Se probó que el sistema permita a los usuarios iniciar sesión correctamente con un nombre de usuario y contraseña válidos.
+Validación de mensajes de error:
+
+Se verificó que se muestren mensajes de error apropiados cuando se ingresen credenciales incorrectas.
+Redirección correcta después del inicio de sesión:
+
+Se comprobó que el sistema redirige correctamente al usuario a la página principal después de un inicio de sesión exitoso.
+Visibilidad de elementos importantes:
+
+Se verificó que ciertos elementos clave de la página, como el mensaje de bienvenida, sean visibles después de un inicio de sesión exitoso.
+Metodología de Pruebas
+Se utilizaron dos patrones de diseño para la automatización de pruebas:
+
+##Page Object Model (POM):
+
+Se implementaron clases para modelar las páginas y sus interacciones. En este caso, se creó un LoginPage que encapsula todas las interacciones con la página de inicio de sesión (llenado de formularios, clic en botones, etc.).
+Screenplay Pattern:
+
+Aunque el uso de Page Object fue predominante, también se incorporaron algunos elementos del patrón Screenplay, como la definición de tareas específicas (inicio de sesión) y actores (usuario) para realizar esas tareas.
+Resultados de las Pruebas
+Prueba de Inicio de Sesión con Credenciales Válidas:
+
+##Resultado: Aprobado.
+La prueba validó con éxito que el sistema permite a los usuarios iniciar sesión con un nombre de usuario 14251103 y una contraseña 123456789$$. El sistema redirige correctamente a la página de inicio después de un inicio de sesión exitoso.
+Prueba de Validación de Credenciales Incorrectas:
+
+##Resultado: Aprobado.
+La prueba validó que se muestran mensajes de error apropiados cuando se ingresan credenciales incorrectas. Se verificó que el sistema no permite acceder a la plataforma con credenciales erróneas.
+Prueba de Redirección Correcta:
+
+##Resultado: Aprobado.
+Se verificó que, tras un inicio de sesión exitoso, el sistema redirige al usuario a la página https://v2.psicoalianza.com/inicio. Esto cumple con el requisito de redirección.
+Visibilidad de Elementos Clave:
+
+##Resultado: Aprobado.
+Se verificó que elementos como el mensaje de bienvenida (e.g., "Bienvenido") son visibles después de iniciar sesión exitosamente.
+Posibles Fallas o Áreas de Mejora
+Tiempo de Respuesta en la Carga de la Página de Inicio:
+
+En algunos casos, se observó un leve retraso en la carga de la página después del inicio de sesión exitoso. Es recomendable realizar optimizaciones en el rendimiento para mejorar la experiencia del usuario.
+Manejo de Errores en Red:
+
+Aunque las pruebas cubrieron escenarios de inicio de sesión con credenciales incorrectas, no se probaron escenarios donde la red es lenta o no está disponible. Incluir pruebas de conexión podría ser útil para mejorar la robustez del sistema.
+Automatización de Pruebas en Diferentes Navegadores:
+
+Las pruebas se realizaron solo en un navegador (Chrome). Sería recomendable ampliar las pruebas a otros navegadores populares como Firefox y Edge para garantizar la compatibilidad multiplataforma.
+Evaluación Final
+Cumplimiento de los Requisitos:
+
+El módulo de inicio de sesión cumple con los requisitos planteados en los mockups. Los usuarios pueden iniciar sesión correctamente con credenciales válidas, y el sistema redirige a la página correcta tras un inicio de sesión exitoso.
+
+Las funcionalidades básicas del inicio de sesión están implementadas correctamente, y no se identificaron fallas críticas que impidan el uso del módulo.
+
+##Recomendaciones para Ajustes Adicionales:
+
+Mejorar el rendimiento: Optimizar la carga de la página de inicio para mejorar los tiempos de respuesta.
+Ampliar las pruebas de red: Asegurarse de que el sistema maneje correctamente los errores de red y los tiempos de espera.
+Pruebas cross-browser: Ejecutar las pruebas en diferentes navegadores para garantizar la compatibilidad.
+Pruebas de seguridad: Realizar pruebas de seguridad adicionales, como ataques de inyección SQL o XSS, para asegurar la integridad del sistema.
+Conclusión
+Las pruebas automatizadas realizadas en el módulo de inicio de sesión de PsicoAlianza han mostrado que el módulo cumple con la mayoría de los requisitos planteados. Sin embargo, se recomienda realizar algunas mejoras en el rendimiento, pruebas de red y pruebas multiplataforma para asegurar una experiencia de usuario óptima y robustez adicional en el sistema.
+
 ##  npx cypress run
 Esto ejecutará todas las pruebas en modo headless (sin interfaz gráfica) y generará un reporte en la consola.
 
