@@ -1,6 +1,19 @@
+## PRUEBA TÉCNICA
+INGENIERO DE PRUEBAS Q.A GERARDO RAMOS VARGAS 
+
+## Parte 1. 
+
+En resumen, al verificar el cumplimiento de los mockups y detectar posibles fallos, inconsistencias en el diseño y vulnerabilidades de seguridad, estás cubriendo aspectos clave para asegurar que la aplicación sea funcional, coherente con los requerimientos y segura. Este proceso de pruebas garantizará que la experiencia del usuario sea fluida y que la aplicación esté protegida contra vulnerabilidades comunes de seguridad.
+
+Se presenta un error "419 Page Expired", generalmente ocurre cuando se utiliza un sistema de protección CSRF (Cross-Site Request Forgery) en el formulario de inicio de sesión y la sesión ha expirado o no se está manejando correctamente el token CSRF.
 
 
-## Sentencia SQL 
+
+
+
+
+
+## Parte 2. Sentencia SQL 
 
 ![image](https://github.com/user-attachments/assets/4f628157-423f-45f2-8b5d-a3791afbdb4f)
 
