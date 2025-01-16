@@ -2,6 +2,15 @@
 
 Este proyecto implementa pruebas automatizadas para el módulo de inicio de sesión de la plataforma PsicoAlianza, utilizando Cypress con la metodología **Page Object Model**.
 
+## Metodología Utilizada: PageObject y Screenplay
+¿Qué es Page Object Model (POM)?
+El Page Object Model (POM) es un patrón de diseño que promueve la separación de los detalles de implementación de la lógica de prueba. En este modelo, cada página de la aplicación (o componente) se representa mediante una clase que encapsula los elementos interactivos y las acciones que pueden realizarse sobre ellos. Las pruebas luego interactúan con estas clases en lugar de directamente con los elementos de la página.
+## ¿Qué es Screenplay?
+El patrón Screenplay es una extensión del patrón Page Object Model, pero en lugar de centrarse en las páginas y sus interacciones, se enfoca en los roles y las interacciones entre ellos. Los roles pueden ser "actor" (quien realiza una acción en la interfaz de usuario) y "tarea" (las acciones que se realizan en la interfaz de usuario). En Screenplay, un actor realiza tareas para interactuar con el sistema.
+
+## Implementación con Screenplay
+Aunque este proyecto usa principalmente Page Object, también podemos integrar el patrón Screenplay si necesitamos modelar roles más complejos. En un escenario Screenplay, los actores serían los usuarios que interactúan con la página (por ejemplo, un usuario que ingresa sus credenciales y hace clic en el botón de inicio de sesión). Las tareas serían las acciones que el actor debe realizar para completar la prueba.
+
 ## Requisitos
 - Node.js (v16 o superior recomendado)
 - npm o yarn
